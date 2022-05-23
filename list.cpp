@@ -114,3 +114,30 @@ void replace(list<int>&l,int x)
 		l.replace(i,x*2);
 	}
 }
+void odd(list<int>&l)
+{
+	int item;
+	for(int i=0;i<l.size();i++)
+	{
+		l.retrieve(i,item);
+		if(item%2==0)
+		{
+			l.remove(i);
+			i--;
+		}
+	}
+}
+void order(list<int>&l)
+{
+	
+	int item;
+	for(int i=0;i<l.size();i++)
+	{
+		l.retrieve(i,item);
+		if(item%2==0)
+		{
+			l.remove(i);
+			l.insert(0,item);
+		}
+	}
+}
